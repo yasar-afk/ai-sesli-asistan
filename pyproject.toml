@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "ai-sesli-asistan"
+version = "1.0.0"
+description = "AI destekli sesli asistan sistemi"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "yasar-afk"}
+]
+dependencies = [
+    "openai-whisper==20250625",
+    "coqui-tts==0.27.2",
+    "torch==2.7.1+cu118",
+    "torchaudio==2.7.1+cu118",
+    "transformers==4.55.4",
+    "librosa==0.11.0",
+    "soundfile==0.13.1",
+    "numpy==2.2.6",
+    "pandas==2.3.3",
+    "requests==2.32.5",
+    "pyttsx3==2.98",
+    "pywin32==308",
+]
+
+[project.scripts]
+ai-sesli-asistan = "main:main"
